@@ -14,7 +14,6 @@
     "test": "__tests__"
   },
   "files": [
-    "lib",
     "dist"
   ],
   "publishConfig": {
@@ -39,6 +38,7 @@
     "react": "16.x"
   },
   "dependencies": {
-    "clsx": "^1.1.1"
+    "clsx": "^1.1.1",
+    "prop-types": "^15.7.2"
   }
 }
