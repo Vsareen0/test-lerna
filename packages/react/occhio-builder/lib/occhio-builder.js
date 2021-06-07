@@ -25,15 +25,10 @@ const inputOptions = {
       // Key configuration
       modules: true,
     }),
-    babel({
-      presets: ["@babel/preset-env", "@babel/preset-react"],
-      babelHelpers: "bundled",
-      exclude: "node_modules/**",
-    }),
     uglify(),
     commonjs({
       namedExports: {
-        "node_modules/prop-types/index.js": ["isValidElementType"],
+        "../../node_modules/prop-types/index.js": ["isValidElementType"],
       },
       include: [
         /node_modules\/prop-types/,
@@ -42,6 +37,11 @@ const inputOptions = {
         /node_modules\/react-is/,
         /node_modules\/warning/,
       ],
+    }),
+    babel({
+      presets: ["@babel/preset-env", "@babel/preset-react"],
+      babelHelpers: "bundled",
+      exclude: "node_modules/**",
     }),
   ],
 };
