@@ -42,6 +42,12 @@ const inputOptions = {
       presets: ["@babel/preset-env", "@babel/preset-react"],
       babelHelpers: "bundled",
       exclude: "node_modules/**",
+      overrides: [
+        {
+          test: "./node_modules",
+          sourceType: "unambiguous",
+        },
+      ],
     }),
   ],
 };
