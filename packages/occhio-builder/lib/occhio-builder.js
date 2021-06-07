@@ -5,6 +5,7 @@ const resolve = require("@rollup/plugin-node-resolve").default;
 const babel = require("@rollup/plugin-babel").default;
 const postcss = require("rollup-plugin-postcss");
 const { uglify } = require("rollup-plugin-uglify");
+const commonjs = require("rollup-plugin-commonjs");
 
 const currentWorkingPath = process.cwd();
 const { src, name } = require(path.join(currentWorkingPath, "package.json"));
@@ -30,6 +31,18 @@ const inputOptions = {
       exclude: "node_modules/**",
     }),
     uglify(),
+    commonjs({
+      namedExports: {
+        "node_modules/prop-types/index.js": ["isValidElementType"],
+      },
+      include: [
+        /node_modules\/prop-types/,
+        /node_modules\/hoist-non-react-statics/,
+        /node_modules\/invariant/,
+        /node_modules\/react-is/,
+        /node_modules\/warning/,
+      ],
+    }),
   ],
 };
 
