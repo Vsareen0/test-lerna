@@ -5,7 +5,8 @@ const resolve = require("@rollup/plugin-node-resolve").default;
 const babel = require("@rollup/plugin-babel").default;
 const postcss = require("rollup-plugin-postcss");
 const { uglify } = require("rollup-plugin-uglify");
-// const transFormPropTypes = require("babel-plugin-transform-react-remove-prop-types");
+const commonjs = require("rollup-plugin-commonjs");
+const transFormPropTypes = require("babel-plugin-transform-react-remove-prop-types");
 
 const currentWorkingPath = process.cwd();
 const { src, name } = require(path.join(currentWorkingPath, "package.json"));
@@ -30,8 +31,35 @@ const inputOptions = {
       {
         mode: "unsafe-wrap",
         removeImport: true,
+        ignoreFilenames: ["node_modules"],
       },
     ],
+    commonjs({
+      include: /node_modules/,
+      namedExports: {
+        // node_modules/prop-types/factoryWithTypeCheckers.js#L115
+        "prop-types": [
+          "array",
+          "bool",
+          "func",
+          "number",
+          "object",
+          "string",
+          "symbol",
+          "any",
+          "arrayOf",
+          "element",
+          "elementType",
+          "instanceOf",
+          "node",
+          "objectOf",
+          "oneOf",
+          "oneOfType",
+          "shape",
+          "exact",
+        ],
+      },
+    }),
     uglify(),
     babel({
       presets: ["@babel/preset-env", "@babel/preset-react"],
