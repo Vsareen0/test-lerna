@@ -1,16 +1,19 @@
 .occhio-button {
-  font-family: "Nunito Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-weight: 700;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-style: normal;
   border: 0;
   border-radius: 5px;
   padding: 10px;
   cursor: pointer;
   display: inline-block;
   line-height: 1;
+  outline: 0;
 }
 .occhio-button--primary {
   color: white;
   background-color: #1ea7fd;
+  border-color: #1ea7fd;
 }
 .occhio-button--secondary {
   color: #333;
@@ -28,4 +31,16 @@
 .occhio-button--large {
   font-size: 16px;
   padding: 12px 24px;
+}
+.occhio-button--outline {
+  background: transparent;
+  color: black;
+  border: 2px solid black;
+}
+.occhio-button--flat {
+  background: none;
+  border: none;
+  color: black;
+}
+.occhio-button--default {
 }

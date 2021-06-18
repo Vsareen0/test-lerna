@@ -7,10 +7,11 @@ export default {
   component: Button,
   argTypes: {
     backgroundColor: { control: "color" },
+    color: { control: "color" },
   },
 };
 
-const Template = (args) => <Button {...args} />;
+const Template = (args) => <Button disabled={true} {...args} />;
 
 export const Primary = Template.bind({});
 Primary.args = {
@@ -33,4 +34,24 @@ export const Small = Template.bind({});
 Small.args = {
   size: "small",
   label: "Button",
+};
+
+export const Flat = Template.bind({});
+Flat.args = {
+  size: "medium",
+  label: "Button",
+  variant: "flat",
+};
+
+export const Outlined = Template.bind({});
+Outlined.args = {
+  size: "medium",
+  label: "Button",
+  variant: "outline",
+};
+
+export const Icon = Template.bind({});
+Icon.args = {
+  size: "medium",
+  icon: "la-1x las la-exclamation-triangle",
 };
