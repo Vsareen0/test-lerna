@@ -1,0 +1,18 @@
+.occhio-chips {
+  margin: 0;
+  padding: 5px 10px;
+  border-radius: 20px;
+  vertical-align: middle;
+  border: 1px solid #35a7ff;
+  color: #0b141e;
+  display: inline-flex;
+  font-size: 12px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  cursor: pointer;
+}
+.occhio-chips--filled {
+  background-color: #35a7ff;
+  color: #fff;
+}

@@ -2,12 +2,13 @@ import React from "react";
 import cx from "clsx";
 import PropTypes from "prop-types";
 import styles from "./styles.css";
-import { Icon } from "../../line-awesome-icons/lib/line-awesome-icons";
+import { Icon } from "@tempestoso/line-awesome-icons";
 
 const Button = ({
   primary,
   variant,
   backgroundColor,
+  color,
   size,
   label,
   iconLeft,
@@ -28,7 +29,7 @@ const Button = ({
       type="button"
       className={classes}
       variant={variant}
-      style={backgroundColor && { backgroundColor }}
+      style={(backgroundColor || color) && { backgroundColor, color }}
       {...props}
     >
       {iconLeft && (
@@ -67,6 +68,10 @@ Button.propTypes = {
    */
   backgroundColor: PropTypes.string,
   /**
+   * What icon, text color to use
+   */
+  color: PropTypes.string,
+  /**
    * How large should the button be?
    */
   size: PropTypes.oneOf(["small", "medium", "large"]),
@@ -92,6 +97,7 @@ Button.propTypes = {
 
 Button.defaultProps = {
   backgroundColor: null,
+  color: null,
   primary: false,
   size: "medium",
   variant: "default",

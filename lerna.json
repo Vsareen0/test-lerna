@@ -1,13 +1,9 @@
 {
-  "packages": [
-    "packages/**"
-  ],
+  "packages": ["packages/react/**"],
   "version": "0.6.5-alpha.0",
   "hoist": true,
   "stream": true,
   "bootstrap": {
-    "npmClientArgs": [
-      "--no-package-lock"
-    ]
+    "npmClientArgs": ["--no-package-lock"]
   }
 }

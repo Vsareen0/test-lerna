@@ -1,0 +1,39 @@
+{
+  "name": "@tempestoso/occhio-chips",
+  "version": "0.6.5-alpha.0",
+  "description": "Chips made with Occhio",
+  "keywords": [
+    "chips",
+    "ui",
+    "library",
+    "react",
+    "components"
+  ],
+  "author": "Vinamra Sareen <vsareen24@gmail.com>",
+  "homepage": "https://github.com/Vsareen0/test-lerna/tree/main/packages/react/occhio-chips#readme",
+  "license": "ISC",
+  "main": "lib/occhio-chips.js",
+  "directories": {
+    "lib": "lib",
+    "test": "__tests__"
+  },
+  "files": [
+    "lib"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Vsareen0/test-lerna.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: run tests from root\" && exit 1"
+  },
+  "bugs": {
+    "url": "https://github.com/Vsareen0/test-lerna/issues"
+  },
+  "dependencies": {
+    "@tempestoso/line-awesome-icons": "^0.6.5-alpha.0"
+  }
+}
