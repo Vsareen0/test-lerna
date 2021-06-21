@@ -11,16 +11,29 @@ export default {
   },
 };
 
-const Template = (args) => <Button disabled={true} {...args} />;
+const Template = (args) => <Button {...args} />;
 
 export const Primary = Template.bind({});
 Primary.args = {
-  primary: true,
+  color: "primary",
   label: "Button",
 };
 
 export const Secondary = Template.bind({});
 Secondary.args = {
+  color: "secondary",
+  label: "Button",
+};
+
+export const Success = Template.bind({});
+Success.args = {
+  color: "success",
+  label: "Button",
+};
+
+export const Danger = Template.bind({});
+Danger.args = {
+  color: "danger",
   label: "Button",
 };
 
@@ -28,12 +41,14 @@ export const Large = Template.bind({});
 Large.args = {
   size: "large",
   label: "Button",
+  // color: "primary",
 };
 
 export const Small = Template.bind({});
 Small.args = {
   size: "small",
   label: "Button",
+  // color: "primary",
 };
 
 export const Flat = Template.bind({});
@@ -48,6 +63,13 @@ Outlined.args = {
   size: "medium",
   label: "Button",
   variant: "outline",
+};
+
+export const Disabled = Template.bind({});
+Disabled.args = {
+  size: "medium",
+  label: "Button",
+  disabled: true,
 };
 
 export const Icon = Template.bind({});

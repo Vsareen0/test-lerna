@@ -3,8 +3,8 @@
   padding: 5px 10px;
   border-radius: 20px;
   vertical-align: middle;
-  border: 1px solid #35a7ff;
-  color: #0b141e;
+  border: 1px solid var(--primary, #35a7ff);
+  color: var(--text-black, #0b141e);
   display: inline-flex;
   font-size: 12px;
   font-family: "Roboto", sans-serif;
@@ -13,6 +13,48 @@
   cursor: pointer;
 }
 .occhio-chips--filled {
-  background-color: #35a7ff;
-  color: #fff;
+  background-color: var(--primary, #35a7ff);
+  color: var(--text-white, #fff);
+}
+.occhio-chips--filled:hover {
+  border: 1px solid var(--primary-hover, #309ef2);
+  background-color: var(--primary--hover, #309ef2);
+}
+.occhio-chips--success {
+  background-color: var(--success, #27cd99);
+  color: var(--text-white, #fff);
+  border: 1px solid var(--success, #27cd99);
+}
+.occhio-chips--success:hover {
+  border: 1px solid var(--success-hover, #24bf8f);
+  background-color: var(--success-hover, #24bf8f);
+}
+.occhio-chips--warning {
+  background-color: var(--warning, #ffc15e);
+  color: var(--text-white, #fff);
+  border: 1px solid var(--warning, #ffc15e);
+}
+.occhio-chips--warning:hover {
+  border: 1px solid var(--warning-hover, #24bf8f);
+  background-color: var(--warning-hover, #24bf8f);
+}
+.occhio-chips--danger {
+  background-color: var(--danger, #ff5964);
+  color: var(--text-white, #fff);
+  border: 1px solid var(--danger, #ff5964);
+}
+.occhio-chips--danger:hover {
+  border: 1px solid var(--danger-hover, #e8515b);
+  background-color: var(--danger-hover, #e8515b);
+}
+.occhio-chips--disabled {
+  cursor: not-allowed;
+  background-color: var(--disabled, #c9c9ee);
+  color: var(--text-disabled, #c1c1c1);
+  border: 1px solid var(--disabled, #c9c9ee);
+  opacity: 0.55;
+}
+.occhio-chips--disabled:hover {
+  border: 1px solid var(--disabled-hover, #bdbdde);
+  background-color: var(--disabled-hover, #bdbdde);
 }

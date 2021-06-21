@@ -1,0 +1,17 @@
+:root {
+  --primary: #35a7ff;
+  --primary-hover: #309ef2;
+  --secondary: #ffe74c;
+  --secondary-hover: #edd745;
+  --danger: #ff5964;
+  --danger-hover: #e8515b;
+  --success: #27cd99;
+  --success-hover: #24bf8f;
+  --warning: #ffc15e;
+  --warning-hover: #e3ab52;
+  --background: #f5f1ed;
+  --disabled: #e6efe9;
+  --text-black: #0b141e;
+  --text-white: #fff;
+  --text-disabled: #303030;
+}

@@ -1,11 +1,11 @@
 import React from "react";
 import cx from "clsx";
 import PropTypes from "prop-types";
+import "../../public/base.css";
 import styles from "./styles.css";
 import { Icon } from "@tempestoso/line-awesome-icons";
 
 const Button = ({
-  primary,
   variant,
   backgroundColor,
   color,
@@ -14,19 +14,22 @@ const Button = ({
   iconLeft,
   iconRight,
   icon,
+  disabled = false,
   ...props
 }) => {
-  const mode = primary ? "occhio-button--primary" : "occhio-button--secondary";
   // Button classes
   const classes = cx(
     styles["occhio-button"],
-    styles[mode],
     styles[`occhio-button--${variant}`],
-    size && styles[`occhio-button--${size}`]
+    size && styles[`occhio-button--${size}`],
+    styles[`occhio-button--${color}`],
+    styles[`occhio-button--${color}:hover`],
+    disabled && styles[`occhio-button--disabled`]
   );
   return (
     <button
       type="button"
+      disabled={disabled}
       className={classes}
       variant={variant}
       style={(backgroundColor || color) && { backgroundColor, color }}
