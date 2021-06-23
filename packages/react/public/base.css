@@ -9,9 +9,14 @@
   --success-hover: #24bf8f;
   --warning: #ffc15e;
   --warning-hover: #e3ab52;
-  --background: #f5f1ed;
+  --background: #ffffff;
+  --backkground-hover: #f0f0f0;
   --disabled: #e6efe9;
   --text-black: #0b141e;
   --text-white: #fff;
   --text-disabled: #303030;
+}
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
 }

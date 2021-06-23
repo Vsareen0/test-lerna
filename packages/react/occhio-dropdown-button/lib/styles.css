@@ -1,0 +1,16 @@
+.occhio-dropdown {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  background: var(--background, #ffffff);
+  display: table;
+  width: max-content;
+  box-shadow: 0 5px 4px rgba(121, 121, 121, 0.45);
+}
+.occhio-dropdown-list {
+  padding: 5px 20px 5px;
+  cursor: pointer;
+}
+.occhio-dropdown-list:hover {
+  background: var(--background-hover, #f0f0f0);
+}
