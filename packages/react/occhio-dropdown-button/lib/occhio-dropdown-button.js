@@ -24,10 +24,10 @@ const DropdownButton = ({ label, items, ...args }) => {
     <OutsideAlerter onOutsideClick={(e) => setExpand(e)}>
       <Button
         label={label}
+        color="primary"
         onClick={() => setExpand(!expand)}
         {...args}
       ></Button>
-
       {expand && <ul className={classes}>{listItems}</ul>}
     </OutsideAlerter>
   );

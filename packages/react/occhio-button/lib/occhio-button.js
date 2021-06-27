@@ -14,7 +14,8 @@ const Button = ({
   iconLeft,
   iconRight,
   icon,
-  disabled = false,
+  loading,
+  disabled,
   ...props
 }) => {
   // Button classes
@@ -24,18 +25,22 @@ const Button = ({
     size && styles[`occhio-button--${size}`],
     styles[`occhio-button--${color}`],
     styles[`occhio-button--${color}:hover`],
-    disabled && styles[`occhio-button--disabled`]
+    disabled && styles[`occhio-button--disabled`],
+    loading && styles[`occhio-button--loading`],
+    loading && styles[`occhio-button-loader`]
   );
+
   return (
     <button
       type="button"
       disabled={disabled}
+      disabled={loading}
       className={classes}
       variant={variant}
       style={(backgroundColor || color) && { backgroundColor, color }}
       {...props}
     >
-      {iconLeft && (
+      {!loading && iconLeft && (
         <>
           <Icon
             iconClass={iconLeft}
@@ -43,8 +48,8 @@ const Button = ({
           ></Icon>
         </>
       )}
-      {label}
-      {iconRight && (
+      {!loading && label}
+      {!loading && iconRight && (
         <>
           <Icon
             iconClass={iconRight}
@@ -52,20 +57,17 @@ const Button = ({
           ></Icon>
         </>
       )}
-      {icon && (
+      {!loading && icon && (
         <>
           <Icon iconClass={icon} style={{ verticalAlign: "middle" }}></Icon>
         </>
       )}
+      {loading && <Icon iconClass="las la-spinner"></Icon>}
     </button>
   );
 };
 
 Button.propTypes = {
-  /**
-   * Is this the principal call to action on the page?
-   */
-  primary: PropTypes.bool,
   /**
    * What background color to use
    */
@@ -100,8 +102,7 @@ Button.propTypes = {
 
 Button.defaultProps = {
   backgroundColor: null,
-  color: null,
-  primary: false,
+  color: "primary",
   size: "medium",
   variant: "default",
   onClick: undefined,

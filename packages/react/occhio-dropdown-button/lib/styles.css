@@ -5,7 +5,10 @@
   background: var(--background, #ffffff);
   display: table;
   width: max-content;
-  box-shadow: 0 5px 4px rgba(121, 121, 121, 0.45);
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  color: #474747;
+  box-shadow: 0 5px 10px rgba(121, 121, 121, 0.15);
 }
 .occhio-dropdown-list {
   padding: 5px 20px 5px;

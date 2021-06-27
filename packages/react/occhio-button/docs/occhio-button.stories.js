@@ -29,6 +29,7 @@ export const Success = Template.bind({});
 Success.args = {
   color: "success",
   label: "Button",
+  iconLeft: "lar la-check-circle",
 };
 
 export const Danger = Template.bind({});
@@ -76,4 +77,11 @@ export const Icon = Template.bind({});
 Icon.args = {
   size: "medium",
   icon: "la-1x las la-exclamation-triangle",
+};
+
+export const Loading = Template.bind({});
+Loading.args = {
+  size: "medium",
+  label: "Loading Button",
+  loading: true,
 };

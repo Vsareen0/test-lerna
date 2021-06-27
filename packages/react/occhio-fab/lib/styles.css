@@ -1,0 +1,28 @@
+.occhio-fab {
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  cursor: pointer;
+  transition: all 0.35s;
+  box-shadow: 5px 5px 10px rgba(21, 21, 21, 0.35);
+  color: var(--text-white, #fff);
+  background-color: var(--primary, #35a7ff);
+  border: var(--primary, #35a7ff);
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+}
+.occhio-fab:hover {
+  box-shadow: 2px 2px 4px rgba(21, 21, 21, 0.65);
+}
+.occhio-fab--left {
+  position: absolute;
+  bottom: 0px;
+  right: 60px;
+  display: flex;
+}
+.occhio-fab--top {
+  position: absolute;
+  bottom: 60px;
+  right: 0px;
+}

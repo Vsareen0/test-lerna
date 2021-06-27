@@ -9,6 +9,8 @@
   display: inline-block;
   line-height: 1;
   outline: 0;
+  /* min-width: 134px;
+  min-height: 35px; */
 }
 .occhio-button:hover {
   background-color: #eaeaea;
@@ -89,4 +91,42 @@
   cursor: not-allowed;
 }
 .occhio-button--default {
+}
+@-webkit-keyframes rotating /* Safari and Chrome */ {
+  from {
+    -webkit-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@keyframes rotating {
+  from {
+    -ms-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  to {
+    -ms-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+.occhio-button--loading > * {
+  -webkit-animation: rotating 0.8s linear infinite;
+  -moz-animation: rotating 0.8s linear infinite;
+  -ms-animation: rotating 0.8s linear infinite;
+  -o-animation: rotating 0.8s linear infinite;
+  animation: rotating 0.8s linear infinite;
+}
+.occhio-button-loader {
+  cursor: progress;
 }
