@@ -15,6 +15,11 @@
   --text-black: #0b141e;
   --text-white: #fff;
   --text-disabled: #303030;
+  /* Animations */
+  --slide-y-in-from: 50px;
+  --slide-y-in-to: -10px;
+  --slide-y-out-from: -10px;
+  --slide-y-out-to: -100px;
 }
 body {
   font-family: "Roboto", sans-serif;
