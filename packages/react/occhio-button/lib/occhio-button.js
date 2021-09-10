@@ -59,7 +59,12 @@ const Button = ({
       )}
       {!loading && icon && (
         <>
-          <Icon iconClass={icon} style={{ verticalAlign: "middle" }}></Icon>
+          <Icon
+            iconClass={icon}
+            style={{
+              verticalAlign: "middle",
+            }}
+          ></Icon>
         </>
       )}
       {loading && <Icon iconClass="las la-spinner"></Icon>}

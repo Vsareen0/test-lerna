@@ -35,12 +35,12 @@
   from {
     visibility: visible;
     opacity: 0;
-    transform: translateY(20px);
+    transform: var(--slide-y-in-from);
   }
   to {
     visibility: visible;
     opacity: 1;
-    transform: translateY(0px);
+    transform: var(--slide-y-in-to);
   }
 }
 
@@ -50,10 +50,68 @@
 
 @keyframes slide-y-out {
   from {
-    transform: translateY(0px);
+    transform: var(--slide-y-out-from);
   }
   to {
     opacity: 0;
-    transform: translateY(20px);
+    transform: var(--slide-y-out-to);
+  }
+}
+
+.occhio-animation--expand-y-in {
+  animation: expand-y-in 0.5s forwards;
+  opacity: 0;
+}
+
+@keyframes expand-y-in {
+  from {
+    transform: scaleY(0);
+  }
+  to {
+    opacity: 1;
+    transform: scaleY(1);
+  }
+}
+
+.occhio-animation--expand-y-out {
+  animation: expand-y-out 0.5s forwards;
+}
+
+@keyframes expand-y-out {
+  from {
+    transform: scaleY(1);
+  }
+  to {
+    opacity: 0;
+    transform: scaleY(0);
+  }
+}
+
+.occhio-animation--expand-x-out {
+  animation: expand-x-out 0.5s forwards ease-out;
+}
+
+@keyframes expand-x-out {
+  from {
+    transform: var(--expand-x-out-from);
+  }
+  to {
+    opacity: 0;
+    transform: var(--expand-x-out-to);
+  }
+}
+
+.occhio-animation--expand-x-in {
+  animation: expand-x-in 0.5s forwards ease-in;
+  opacity: 0;
+}
+
+@keyframes expand-x-in {
+  from {
+    transform: var(--expand-x-in-from);
+  }
+  to {
+    opacity: 1;
+    transform: var(--expand-x-in-to);
   }
 }

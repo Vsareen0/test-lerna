@@ -1,0 +1,132 @@
+.occhio-button {
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  border: 0;
+  border-radius: 5px;
+  padding: 10px;
+  cursor: pointer;
+  display: inline-block;
+  line-height: 1;
+  outline: 0;
+  /* min-width: 134px;
+    min-height: 35px; */
+}
+.occhio-button:hover {
+  background-color: #eaeaea;
+}
+.occhio-button--primary {
+  color: var(--text-white, #fff);
+  background-color: var(--primary, #35a7ff);
+  border-color: var(--primary, #35a7ff);
+}
+.occhio-button--primary:hover {
+  background-color: var(--primary-hover, #35a7ff);
+  border-color: var(--primary-hover, #35a7ff);
+}
+.occhio-button--secondary {
+  color: var(--text-white, #fff);
+  background-color: var(--secondary, #ffe74c);
+  border-color: var(--primary-hover, #ffe74c);
+  /* box-shadow: rgba(53, 167, 255, 0.75) 0px 0px 0px 1px inset; */
+}
+.occhio-button--secondary:hover {
+  background-color: var(--secondary-hover, #edd745);
+  border-color: var(--secondary-hover, #edd745);
+}
+.occhio-button--success {
+  color: var(--text-white, #fff);
+  background-color: var(--success, #27cd99);
+  border-color: var(--success, #27cd99);
+}
+.occhio-button--success:hover {
+  background-color: var(--success-hover, #24bf8f);
+  border-color: var(--success-hover, #24bf8f);
+}
+.occhio-button--danger {
+  color: var(--text-white, #fff);
+  background-color: var(--danger, #ff5964);
+  border-color: var(--danger-hover, #ff5964);
+  /* box-shadow: rgba(53, 167, 255, 0.75) 0px 0px 0px 1px inset; */
+}
+.occhio-button--danger:hover {
+  background-color: var(--danger-hover, #e8515b);
+  border-color: var(--danger-hover, #e8515b);
+}
+.occhio-button--small {
+  font-size: 12px;
+  padding: 10px 16px;
+}
+.occhio-button--medium {
+  font-size: 14px;
+  padding: 11px 20px;
+}
+.occhio-button--large {
+  font-size: 16px;
+  padding: 12px 24px;
+}
+.occhio-button--outline {
+  background: transparent;
+  color: var(--primary, #35a7ff);
+  border: 2px solid var(--primary, #35a7ff);
+  box-shadow: none;
+}
+.occhio-button--outline:hover {
+  background-color: var(--background, #f5f1ed);
+  /* border-color: var(--background, #f5f1ed); */
+}
+.occhio-button--disabled {
+  cursor: not-allowed;
+}
+.occhio-button--hover {
+  cursor: not-allowed;
+}
+.occhio-button--flat {
+  background: none;
+  border: none;
+  color: var(--primary);
+  box-shadow: none;
+}
+.occhio-button--disabled {
+  cursor: not-allowed;
+}
+.occhio-button--default {
+}
+@-webkit-keyframes rotating /* Safari and Chrome */ {
+  from {
+    -webkit-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@keyframes rotating {
+  from {
+    -ms-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  to {
+    -ms-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+.occhio-button--loading > * {
+  -webkit-animation: rotating 0.8s linear infinite;
+  -moz-animation: rotating 0.8s linear infinite;
+  -ms-animation: rotating 0.8s linear infinite;
+  -o-animation: rotating 0.8s linear infinite;
+  animation: rotating 0.8s linear infinite;
+}
+.occhio-button-loader {
+  cursor: progress;
+}

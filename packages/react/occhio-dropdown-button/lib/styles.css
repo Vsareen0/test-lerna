@@ -4,7 +4,9 @@
   padding: 0;
   background: var(--background, #ffffff);
   display: table;
-  width: max-content;
+  width: inherit;
+  /* width: max-content; */
+  width: 100%;
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
   color: #474747;

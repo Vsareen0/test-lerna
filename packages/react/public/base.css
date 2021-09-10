@@ -16,10 +16,21 @@
   --text-white: #fff;
   --text-disabled: #303030;
   /* Animations */
-  --slide-y-in-from: 50px;
-  --slide-y-in-to: -10px;
-  --slide-y-out-from: -10px;
-  --slide-y-out-to: -100px;
+  /* Slide */
+  --slide-y-in-from: translateY(20px);
+  --slide-y-in-to: translateY(0px);
+  --slide-y-out-from: translateY(0px);
+  --slide-y-out-to: translateY(20px);
+  /* Expand */
+  --expand-y-in-from: scaleY(0);
+  --expand-y-in-to: scaleY(1);
+  --expand-y-out-from: scaleY(1);
+  --expand-y-out-to: scaleY(0);
+  /* Expand -x axis */
+  --expand-x-in-from: translateX(20px);
+  --expand-x-in-to: translateX(0);
+  --expand-x-out-from: translateX(0);
+  --expand-x-out-to: translateX(20px);
 }
 body {
   font-family: "Roboto", sans-serif;
