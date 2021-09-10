@@ -33,3 +33,8 @@ export const Slide = Template.bind({});
 Slide.args = {
   type: "slide-y",
 };
+
+export const Expand = Template.bind({});
+Expand.args = {
+  type: "expand-y",
+};
