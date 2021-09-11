@@ -34,6 +34,7 @@
     "url": "https://github.com/Vsareen0/test-lerna/issues"
   },
   "dependencies": {
+    "@tempestoso/line-awesome-icons": "^0.6.5-alpha.0",
     "@tempestoso/occhio-button": "^0.6.5-alpha.0",
     "@tempestoso/occhio-outside-click": "^0.6.5-alpha.0"
   }
